@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('instruments.index');
-});
-
+Route::get('/', 'instrumentsController@index');
 Route::resource('instruments', 'instrumentsController');
+
+Auth::routes();
+
